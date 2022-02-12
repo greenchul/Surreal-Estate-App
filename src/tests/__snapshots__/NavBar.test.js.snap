@@ -8,22 +8,25 @@ exports[`NavBar NavBar renders correctly 1`] = `
     <ul>
       <li
         class="navbar-logo"
+        data-testid="logo"
       >
         🏠
       </li>
       <li>
-        <p
+        <a
           class="navbar-links"
+          href="/"
         >
           View Properties
-        </p>
+        </a>
       </li>
       <li>
-        <p
+        <a
           class="navbar-links"
+          href="/add-property"
         >
           Add a property
-        </p>
+        </a>
       </li>
     </ul>
   </div>

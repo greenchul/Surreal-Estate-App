@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`component renders correctly 1`] = `
+<DocumentFragment>
+  <div
+    class="App"
+  >
+    <div
+      class="navbar"
+    >
+      <ul>
+        <li
+          class="navbar-logo"
+          data-testid="logo"
+        >
+          🏠
+        </li>
+        <li>
+          <a
+            class="navbar-links"
+            href="/"
+          >
+            View Properties
+          </a>
+        </li>
+        <li>
+          <a
+            class="navbar-links"
+            href="/add-property"
+          >
+            Add a property
+          </a>
+        </li>
+      </ul>
+    </div>
+    <h1>
+      Surreal Estate
+    </h1>
+    <div>
+      <p>
+        Properties!
+      </p>
+    </div>
+  </div>
+</DocumentFragment>
+`;
