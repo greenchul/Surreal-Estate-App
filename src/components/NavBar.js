@@ -10,12 +10,12 @@ const NavBar = () => {
           🏠
         </li>
         <li>
-          <Link exact to="/" className="navbar-links">
+          <Link to="/" className="navbar-links">
             View Properties
           </Link>
         </li>
         <li>
-          <Link exact to="/add-property" className="navbar-links">
+          <Link to="/add-property" className="navbar-links">
             Add a property
           </Link>
         </li>
