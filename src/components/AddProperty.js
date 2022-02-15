@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "../styles/AddProperty.css";
+import axios from "axios";
 
 const AddProperty = () => {
   const initialState = {
@@ -17,6 +18,15 @@ const AddProperty = () => {
 
   const handleAddProperty = (e) => {
     e.preventDefault();
+    console.log(fields);
+    axios
+      .post("http://localhost:4000/api/v1/PropertyListing", fields)
+      .then((result) => {
+        console.log(result);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   };
   const handleFieldChange = (e) => {
     setFields({ ...fields, [e.target.name]: e.target.value });
