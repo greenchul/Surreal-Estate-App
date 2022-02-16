@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "../styles/AddProperty.css";
 import axios from "axios";
+import Alert from "./Alert";
 
 const AddProperty = () => {
   const initialState = {
@@ -12,20 +13,28 @@ const AddProperty = () => {
       price: 0,
       city: "Manchester",
     },
+    alert: {
+      message: "",
+      isSuccess: true,
+    },
   };
   // eslint-disable-next-line no-unused-vars
   const [fields, setFields] = useState(initialState.fields);
+  const [alert, setAlert] = useState(initialState.alert);
 
   const handleAddProperty = (e) => {
     e.preventDefault();
     console.log(fields);
+    setAlert(initialState.alert);
     axios
       .post("http://localhost:4000/api/v1/PropertyListing", fields)
       .then((result) => {
         console.log(result);
+        setAlert({ message: "Success!", isSuccess: true });
       })
       .catch((err) => {
         console.log(err);
+        setAlert({ message: "Error", isSuccess: false });
       });
   };
   const handleFieldChange = (e) => {
@@ -34,6 +43,7 @@ const AddProperty = () => {
   return (
     <div className="add-property">
       <p>Add Properties</p>
+      <Alert message={alert.message} success={alert.isSuccess} />
       <form onSubmit={handleAddProperty} className="add-property__form">
         <label htmlFor="title">
           Title
@@ -82,7 +92,7 @@ const AddProperty = () => {
         </label>
 
         <label htmlFor="bathrooms">
-          Bathroom
+          Bathrooms
           <input
             type="number"
             id="bathrooms"

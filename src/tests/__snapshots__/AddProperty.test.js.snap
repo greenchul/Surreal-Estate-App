@@ -8,6 +8,9 @@ exports[`AddProperty component component renders correctly 1`] = `
     <p>
       Add Properties
     </p>
+    <p
+      class="alert success"
+    />
     <form
       class="add-property__form"
     >
@@ -86,7 +89,7 @@ exports[`AddProperty component component renders correctly 1`] = `
       <label
         for="bathrooms"
       >
-        Bathroom
+        Bathrooms
         <input
           class="add-property__form__field"
           id="bathrooms"
