@@ -64,7 +64,7 @@ describe("AddProperty component", () => {
         <AddProperty />
       </BrowserRouter>
     );
-    const priceElement = screen.getByDisplayValue("0");
+    const priceElement = screen.getByPlaceholderText("0");
 
     expect(priceElement).toBeInTheDocument();
   });

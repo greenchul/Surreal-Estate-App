@@ -84,6 +84,7 @@ exports[`AddProperty component component renders correctly 1`] = `
           name="bedrooms"
           placeholder="4"
           type="number"
+          value=""
         />
       </label>
       <label
@@ -98,6 +99,7 @@ exports[`AddProperty component component renders correctly 1`] = `
           name="bathrooms"
           placeholder="1"
           type="number"
+          value=""
         />
       </label>
       <label
@@ -109,8 +111,9 @@ exports[`AddProperty component component renders correctly 1`] = `
           id="price"
           min="0"
           name="price"
+          placeholder="0"
           type="number"
-          value="0"
+          value=""
         />
       </label>
       <label
@@ -154,6 +157,7 @@ exports[`AddProperty component component renders correctly 1`] = `
           name="email"
           placeholder="hello@email.com"
           type="email"
+          value=""
         />
       </label>
       <div

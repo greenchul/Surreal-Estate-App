@@ -8,10 +8,11 @@ const AddProperty = () => {
     fields: {
       title: "",
       type: "Flat",
-      bedrooms: 0,
-      bathrooms: 0,
-      price: 0,
+      bedrooms: "",
+      bathrooms: "",
+      price: "",
       city: "Manchester",
+      email: "",
     },
     alert: {
       message: "",
@@ -31,6 +32,7 @@ const AddProperty = () => {
       .then((result) => {
         console.log(result);
         setAlert({ message: "Success!", isSuccess: true });
+        setFields(initialState.fields);
       })
       .catch((err) => {
         console.log(err);
@@ -85,7 +87,7 @@ const AddProperty = () => {
             min="0"
             max="20"
             name="bedrooms"
-            // value={fields.bedrooms}
+            value={fields.bedrooms}
             onChange={handleFieldChange}
             className="add-property__form__field"
           />
@@ -99,7 +101,7 @@ const AddProperty = () => {
             min="0"
             max="15"
             name="bathrooms"
-            // value={fields.bathrooms}
+            value={fields.bathrooms}
             onChange={handleFieldChange}
             className="add-property__form__field"
             placeholder="1"
@@ -112,8 +114,9 @@ const AddProperty = () => {
             type="number"
             name="price"
             id="price"
-            value={fields.price}
+            placeholder="0"
             min="0"
+            value={fields.price}
             onChange={handleFieldChange}
             className="add-property__form__field"
           />
@@ -141,6 +144,7 @@ const AddProperty = () => {
             type="email"
             id="email"
             name="email"
+            value={fields.email}
             placeholder="hello@email.com"
             onChange={handleFieldChange}
             className="add-property__form__field"
