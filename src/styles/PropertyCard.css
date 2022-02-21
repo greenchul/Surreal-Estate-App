@@ -1,0 +1,11 @@
+.property-card {
+  height: 25vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.property-card__title {
+  font-weight: 700;
+  text-decoration: underline;
+}

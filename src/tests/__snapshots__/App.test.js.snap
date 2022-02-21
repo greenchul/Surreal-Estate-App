@@ -36,11 +36,9 @@ exports[`component renders correctly 1`] = `
     <h1>
       Surreal Estate
     </h1>
-    <div>
-      <p>
-        Properties!
-      </p>
-    </div>
+    <div
+      class="properties"
+    />
   </div>
 </DocumentFragment>
 `;
