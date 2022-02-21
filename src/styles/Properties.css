@@ -1,8 +1,14 @@
 .properties {
   display: flex;
   flex-direction: row;
+}
+
+.properties__container {
+  display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-evenly;
+  width: 100%;
 }
 
 .property {

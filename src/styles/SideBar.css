@@ -1,0 +1,9 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar__links {
+  color: purple;
+  margin-bottom: 20px;
+}
