@@ -11,6 +11,9 @@ const PropertyCard = ({
   price,
   city,
   email,
+  userID,
+  id,
+  onSaveProperty,
 }) => {
   return (
     <div className="property-card">
@@ -35,6 +38,13 @@ const PropertyCard = ({
           Email
         </a>
       </div>
+      {userID && (
+        <div>
+          <button type="button" onClick={() => onSaveProperty(id)}>
+            Save
+          </button>
+        </div>
+      )}
     </div>
   );
 };
@@ -49,4 +59,7 @@ PropertyCard.propTypes = {
   price: propTypes.number.isRequired,
   city: propTypes.string.isRequired,
   email: propTypes.string.isRequired,
+  userID: propTypes.string.isRequired,
+  id: propTypes.string.isRequired,
+  onSaveProperty: propTypes.func.isRequired,
 };
